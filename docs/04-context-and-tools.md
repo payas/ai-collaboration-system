@@ -108,6 +108,26 @@ These features do not create the collaboration system by themselves.
 
 But they can make it much easier for the model to stay aligned with the right working context.
 
+## How This Relates To Built-In Memory Features
+
+Some environments already include automatic memory.
+
+Claude Code, for example, has auto-memory (which captures project-specific knowledge like build commands, naming conventions, and architecture decisions) and Auto Dream (which consolidates and prunes that memory between sessions).
+
+These features solve the technical memory problem: the model remembers what the project needs.
+
+The collaboration system solves a different problem: the model remembers how to work with you.
+
+Auto-memory captures "this project uses Fastify, not Express."
+
+A collaboration log captures "show me alternatives as branches before collapsing to one answer."
+
+One is project knowledge. The other is relationship knowledge.
+
+They don't compete. They are complementary layers.
+
+As built-in memory features become more common across tools, the collaboration layer will likely remain the part that developers need to define themselves — because how you want to collaborate is not something a model can infer from your codebase.
+
 ## A Practical Example
 
 Suppose the model has access to the same search, read, edit, and shell tools in two different situations.
