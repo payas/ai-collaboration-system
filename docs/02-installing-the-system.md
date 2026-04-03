@@ -32,6 +32,8 @@ persistent rule, and a minimal first entry if appropriate.
 
 Replace the path with wherever the blueprint or equivalent starter recipe lives in the target project.
 
+Note: the `@` syntax is specific to Cursor. In Claude Code or other terminal-based environments, reference the file by path or paste its contents directly.
+
 That prompt gives the model a clear job:
 
 - read the blueprint
@@ -226,6 +228,8 @@ If exact time is not available, date-only is still acceptable.
 
 ## Suggested File Tree
 
+### Cursor
+
 ```text
 docs/
   COLLABORATION-LOG.md
@@ -235,7 +239,20 @@ docs/
     collaboration-log.mdc
 ```
 
+### Claude Code
+
+```text
+docs/
+  COLLABORATION-LOG.md
+
+CLAUDE.md
+```
+
+In Claude Code, add the collaboration log instructions directly to the project's `CLAUDE.md` file. This file is loaded automatically at the start of every session.
+
 ## Minimal Rule Example
+
+### Cursor
 
 ```md
 ---
@@ -250,6 +267,21 @@ alwaysApply: true
 - Update it only when durable patterns emerge.
 - Merge repeated lessons instead of appending diary-style notes.
 ```
+
+### Claude Code
+
+Add to your project's `CLAUDE.md`:
+
+```md
+# Collaboration Log
+
+- Keep `docs/COLLABORATION-LOG.md` in mind as live collaboration memory.
+- Consult it when relevant to the task.
+- Update it only when durable patterns emerge.
+- Merge repeated lessons instead of appending diary-style notes.
+```
+
+No frontmatter is needed. `CLAUDE.md` at the project root is always loaded at session start.
 
 ## Minimal First Entry Example
 

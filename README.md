@@ -32,6 +32,8 @@ Set up the required files, keep the system lightweight, and use it as durable
 project memory for how we collaborate.
 ```
 
+The `@` syntax works in Cursor. In Claude Code, reference the file by path instead.
+
 That's it. The model reads the blueprint, creates the log and rule, and seeds a first entry. You work normally from there.
 
 ## What's In This Repo
