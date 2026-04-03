@@ -119,6 +119,39 @@ Its role is to remind the assistant to:
 - update it only when meaningful patterns emerge
 - keep it lightweight and high-signal
 
+#### Cursor
+
+Create `.cursor/rules/collaboration-log.mdc`:
+
+```md
+---
+description: Keep the collaboration log present and useful
+alwaysApply: true
+---
+
+# Collaboration Log
+
+- Keep `docs/COLLABORATION-LOG.md` in mind as live collaboration memory.
+- Consult it when relevant to the task.
+- Update it only when durable patterns emerge.
+- Merge repeated lessons instead of appending diary-style notes.
+```
+
+#### Claude Code
+
+Add to the project's `CLAUDE.md` (create it if it does not exist):
+
+```md
+# Collaboration Log
+
+- Keep `docs/COLLABORATION-LOG.md` in mind as live collaboration memory.
+- Consult it when relevant to the task.
+- Update it only when durable patterns emerge.
+- Merge repeated lessons instead of appending diary-style notes.
+```
+
+No frontmatter is needed. `CLAUDE.md` at the project root is always loaded at session start.
+
 ### 3. A merge-based update habit
 
 The system should not append every interaction forever.
@@ -297,12 +330,7 @@ The persistent rule should be:
 - non-invasive
 - focused on consulting and updating the log, not enforcing heavy process
 
-Example responsibilities for the rule:
-
-- keep the collaboration log in mind
-- consult it when relevant
-- update it only when new durable insights appear
-- avoid turning it into a diary
+The concrete rule text and file locations are defined above in "A lightweight persistent reminder." Use the version that matches the current environment (Cursor or Claude Code).
 
 ## Interaction Philosophy
 

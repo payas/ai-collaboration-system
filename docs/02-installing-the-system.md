@@ -19,7 +19,7 @@ In practice, the easiest way to install the system is not to build it manually.
 
 It is to ask the model to create it for the project.
 
-Example prompt:
+### Cursor
 
 ```text
 Create a collaboration system for this project by following the instructions in
@@ -30,9 +30,18 @@ project memory for how we collaborate. Create the collaboration log, the
 persistent rule, and a minimal first entry if appropriate.
 ```
 
-Replace the path with wherever the blueprint or equivalent starter recipe lives in the target project.
+### Claude Code
 
-Note: the `@` syntax is specific to Cursor. In Claude Code or other terminal-based environments, reference the file by path or paste its contents directly.
+```text
+Create a collaboration system for this project by following the instructions in
+docs/COLLABORATION-SYSTEM-BLUEPRINT.md.
+
+Set up the required files, keep the system lightweight, and use it as durable
+project memory for how we collaborate. Create the collaboration log, the
+persistent rule, and a minimal first entry if appropriate.
+```
+
+Replace the path with wherever the blueprint or equivalent starter recipe lives in the target project.
 
 That prompt gives the model a clear job:
 
